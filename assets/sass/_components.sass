@@ -115,6 +115,8 @@
       margin: 0
     @media screen and (min-width: $mobile-menu-breakpoint)
       padding-left: 0
+      padding-right: 4%
+      font-size: xx-large
       // margin-left: -16rem
       // transform: translateX(50rem)
       img
@@ -169,11 +171,11 @@
   align-items: center
   user-select: none
   &_back
-    color: $light
+    color: #694978
     outline: none
     border: none
     appearance: none
-    background-color: $theme
+    background-color: #e3d9e8
     font-size: 1rem
     cursor: pointer
     padding: 0.5rem 1rem
@@ -185,13 +187,17 @@
     border: 1px solid darken($theme, 20%)
 
   &_translucent
-    background-color: rgba($theme, 0.15)
-    color: $theme
+    background-color: #E3D9E8
+    color: #694978
     border: 1px solid transparent
+    &:hover, &:focus
+      background-color: darken(#694978, 20%)
+      color: $light
+      border: 1px solid darken(#694978, 20%)
   &_tally
     padding: 0 0.75rem
     border-radius: 0.5rem
-    background-color: $theme
+    background-color: #B79DC4
     display: inline-flex
     justify-content: center
     align-items: center
@@ -280,7 +286,7 @@
     margin: 1rem auto
   &_content
     a:not(.button)
-      color: $theme
+      color: #B95580
     ul, ol
       list-style: initial
       padding: 0.5rem 1.25rem
@@ -724,7 +730,7 @@ figcaption
   &_result
     padding: 0.5rem 1rem
     &:not(.passive):hover
-      background-color: var(--code-bg)
+      background-color: darken(#694978, 20%)
       color: $light
     &.passive
       display: grid
@@ -743,7 +749,7 @@ figcaption
         display: none
   &_title
     padding: 0.25rem 1rem !important
-    background-color: $theme
+    background-color: #694978
     color: var(--light)
     margin: 0
     font-size: 1.25rem
