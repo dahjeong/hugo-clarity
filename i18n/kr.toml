@@ -1,0 +1,72 @@
+[read_more]
+other = "더보기"
+
+[copyright]
+other = "저작권"
+
+[all_rights]
+other = "모든 권리 보유"
+
+[share_on]
+other = "공유하기"
+
+[featured_posts]
+other = "주요 포스트"
+
+[recent_posts]
+other = "최신 포스트"
+
+[404_title]
+other = "엥???"
+
+[could_not_find]
+other = "페이지를 찾을 수 없습니다."
+
+[go_back]
+other = "되돌아가기"
+
+[translations]
+other = "번역"
+
+[categories]
+other = "카테고리"
+
+[tags]
+other = "태그"
+
+[series]
+other = "시리즈"
+
+[all_categories]
+other = "모든 카테고리"
+
+[all_tags]
+other = "모든 태그"
+
+[all_series]
+other = "모든 시리즈"
+
+[overview]
+other = "개요"
+
+[reading_time]
+other = "읽으시는데 {{ .ReadingTime }} 분 걸립니다."
+
+[series_posts]
+other = "이 시리즈의 포스트"
+
+# search
+[quick_links]
+  other = "결과"
+[no_matches]
+  other = "아무것도 찾을 수가 없습니다."
+[search_field_placeholder]
+  other = "Search the knowledge base"
+[blog_search_field_placeholder]
+  other = "찾는 중..."
+[search_results_label]
+  other = "결과"
+[short_search_query]
+  other = "쿼리가 너무 짧습니다."
+[type_to_search]
+  other = "찾으실 것을 입력하세요."

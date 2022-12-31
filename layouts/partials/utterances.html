@@ -1,9 +1,53 @@
 {{ if .Site.Params.utterancesRepo }}
- <script src="https://utteranc.es/client.js"
-         repo="{{.Site.Params.utterancesRepo}}"
-         issue-term="{{.Site.Params.utterancesIssueTerm | default "pathname"}}"
-         theme="{{.Site.Params.utterancesTheme | default "github-dark"}}"
-         crossorigin="anonymous"
-         async>
- </script>
- {{ end }}
+    <section>
+        <div id="light-mode">
+          <script src="https://utteranc.es/client.js"
+            repo="{{.Site.Params.utterancesRepo}}"
+            issue-term="{{.Site.Params.utterancesIssueTerm}}"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+          </script>
+        </div>
+  
+        <div id="dark-mode">
+          <script src="https://utteranc.es/client.js"
+            repo="{{.Site.Params.utterancesRepo}}"
+            issue-term="{{.Site.Params.utterancesIssueTerm}}"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+          </script>
+        </div>
+  
+        <script>
+          const uttLight = document.getElementById("light-mode");
+          const uttDark = document.getElementById("dark-mode");
+          
+          
+          let initTheme = "light";
+          if ($("html[mode=dark]").length > 0
+          || ($("html[mode]").length == 0
+              && window.matchMedia("(prefers-color-scheme: dark)").matches ) ) {
+            initTheme = "dark";
+          }
+          
+
+          if(initTheme == "dark"){
+            uttLight.remove();
+          } else {
+            uttDark.remove();
+          }
+        </script>
+      </section>
+{{ end }}
+
+<!-- {{ if .Site.Params.utterancesRepo }}
+        <div><script src="https://utteranc.es/client.js"
+                repo="{{.Site.Params.utterancesRepo}}"
+                issue-term="{{.Site.Params.utterancesIssueTerm}}"
+                theme="{{.Site.Params.utterancesTheme}}"
+                crossorigin="anonymous"
+                async>
+        </script></div>
+{{ end }} -->

@@ -18,7 +18,7 @@ body, html
     background-color: transparent
 body
   font-family: var(--font)
-  background: #FCF8FB
+  background: var(--choice-bg)
   color: var(--text)
   font-size: 1.1rem
   line-height: 1.5
@@ -35,12 +35,14 @@ body
 a
   text-decoration: none
   color: inherit
+  font-weight: 400
   &:focus, &:focus-within
     outline: none !important
 
+
 h1,h2,h3,h4,h5
   font-family: inherit
-  font-weight: 300
+  font-weight: 400
   padding: 5px 0
   margin: 15px 0
   color: var(--header-text)
@@ -52,7 +54,7 @@ h1
   font-size: 200%
   font-weight: 400
 h2
-  font-size: 175%
+  font-size: 140%
 h3
   font-size: 150%
 h4
@@ -108,25 +110,22 @@ aside
 table
   width: 100%
   border-collapse: collapse
-  background: #faeff4
+  background: var(--table-bg)
   // border-style: hidden
   margin-bottom: 1.5rem
   &:not(.ln-table) t
-    background: var(--table-bg)
+    background: var(--table-haze)
 
 td, th
   padding: 0.5rem 1rem
   border: 1px solid var(--table-border)
-
-td,
-th
-  padding: 0.5rem 1rem
   font-weight: 400
   &:not(:first-child)
     padding-left: 1.5rem
 
 th
-  font-weight: 700
+  font-weight: 
+  background-color: var(--table-haze)
 
 tbody
   padding: 0

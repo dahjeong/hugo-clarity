@@ -1,7 +1,8 @@
 $light: #fff
+$dark: #322239
 $haze: #fafafa
 $xhaze: darken($haze, 11%)
-$bg: #694978
+$head-bg: #694978
 $theme: #EEC5DA
 $mobile-menu-breakpoint: 769px
 $single-column-breakpoint: 42rem
@@ -26,28 +27,30 @@ html
   --color-mode: 'lit'
   --light: #fff
   --dark: #000
-  --bg: #002538
+  --bg: #1a171b
+  --choice-bg: #FCF8FB
   --haze: #f2f2f2
   --gray: #020202
   --accent: var(--gray)
   --text: #575757
   --header-text: var(--dark)
-  --font: Metropolis, sans-serif
-  --theme: #0077b8
+  --font: NotoSans
+  --theme: #EEC5DA
+  --darktheme: #B95580
+  --header-bg: #694978
   --ease: cubic-bezier(.19,1,.22,1)
-  --code-bg: var(--bg)
-  --table-bg: var(--light)
-  --table-haze: var(--haze)
-  --table-border: #EEC5DA
-  --footer-bg: $bg
+  --code-bg: #322239
+  --table-bg: #faeff4
+  --table-haze: var(--theme)
+  --table-border: var(--darktheme)
+  --footer-bg: $head-bg
   --shadow: rgba(0,0,0,0.12)
   --translucent: rgba(0,0,0,0.05)
   --translucent-light: rgba(255,255,255,0.05)
   --post-bg: var(--light)
-  --choice-bg: var(--haze)
   --ease: cubic-bezier(0.39, 0.575, 0.565, 1)
   --easing: cubic-bezier(.19,1,.22,1)
-  --notice-code-bg: var(--bg)
+  --notice-code-bg: #322239
   --notice-info-border-color: #F2E2B5
   --notice-info-background: #F1F0E6
   --notice-note-border-color: #EEC5DA
@@ -58,27 +61,28 @@ html
   --notice-warning-background: #E0EEEF
 
   &.page
-    --choice-bg: var(--light)
+    
   @mixin darkmode
     --light: hsla(0,0%,100%,0.87)
+    --choice-bg: var(--dark)
     --color-mode: 'dim'
     --text: var(--light)
     --accent: var(--bubble)
-    --choice-bg: var(--bg)
-    --code-bg: var(--translucent-light)
+    --code-bg: var(--bg)
+    --header-bg: #322239
     --header-text: var(--light)
-    --table-bg: var(--code-bg)
-    --table-haze: rgba(255,255,255,0.1)
-    --table-border: var(--code-bg)
-    --footer-bg: var(--bg)
-    --post-bg: var(--translucent-light)
+    --table-bg: var(--bg)
+    --table-haze: var(--header-bg)
+    --table-border: var(--light)
+    --footer-bg: var(--dark)
+    --post-bg: var(--bg)
     *
       // box-shadow: none !important
 
   &[data-mode="dim"]
     @include darkmode
     blockquote
-      background: var(--translucent-light)
+      background: var(--bg)
       color: #dedede
     svg.icon
       fill: var(--light)
